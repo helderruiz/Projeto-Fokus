@@ -22,11 +22,11 @@ const tempoNaTela = document.querySelector('#timer')
 
 //Pegando o ID do input da musica checkbox
 const musicaFocoInput = document.querySelector('#alternar-musica')
-const musica = new Audio('/sons/luna-rise-part-one.mp3')
+const musica = new Audio('sons/luna-rise-part-one.mp3')
 //Pegando as musicas do botão 'Começar' do temporizador
-const musicaPlay = new Audio('/sons/play.wav')
-const musicaPause = new Audio('/sons/pause.mp3')
-const musicaAcabouTempo = new Audio('/sons/beep.mp3')
+const musicaPlay = new Audio('sons/play.wav')
+const musicaPause = new Audio('sons/pause.mp3')
+const musicaAcabouTempo = new Audio('sons/beep.mp3')
 
 // Variavel para o temporizador
 let tempoDecorridoEmSegundos = 1500
@@ -82,7 +82,7 @@ function alterarContexto(contexto) {
     })
 
     html.setAttribute('data-contexto', contexto)
-    banner.setAttribute('src', `/imagens/${contexto}.png`)
+    banner.setAttribute('src', `imagens/${contexto}.png`)
 
     //Metodo switch é como se fosso if e else, utilizando ele para alterar os texto
     switch (contexto) {
@@ -141,13 +141,13 @@ function iniciarOuPausar () {
     musicaPlay.play()
     intervaloId = setInterval(contagemRegressiva, 1000)
     iniciarOuPausarBt.textContent = 'Pausar'
-    iniciarOuPausarBtIcone.setAttribute('src', `/imagens/pause.png`)
+    iniciarOuPausarBtIcone.setAttribute('src', `imagens/pause.png`)
 }
 
 function zerar() {
     clearInterval(intervaloId)
     iniciarOuPausarBt.textContent = 'Começar'
-    iniciarOuPausarBtIcone.setAttribute('src', `/imagens/play_arrow.png`)
+    iniciarOuPausarBtIcone.setAttribute('src', `imagens/play_arrow.png`)
     intervaloId = null
 }
 
